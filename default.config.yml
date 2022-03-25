@@ -46,6 +46,7 @@ homebrew_installed_packages:
   - ack
   - coreutils
   - fish
+  - gnupg
   - grc
   - libgit2
   - node
