@@ -10,6 +10,14 @@
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
+    - name: Create folders
+      file:
+        path: "{{ item }}"
+        state: directory
+      loop:
+        - ~/.config/fish/functions
+        - ~/.config/iterm2
+      tags: ['always']
 
   roles:
     - role: elliotweiser.osx-command-line-tools
