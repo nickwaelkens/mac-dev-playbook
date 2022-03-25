@@ -2,8 +2,8 @@
 downloads: ~/.ansible-downloads/
 
 configure_dotfiles: true
-configure_terminal: true
-configure_osx: true
+configure_terminal: false
+configure_macos: true
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: false
@@ -24,44 +24,42 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+# https://github.com/geerlingguy/ansible-role-dotfiles
+dotfiles_repo: https://github.com/nickwaelkens/dotfiles.git
+dotfiles_repo_version: master
 dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_repo_local_destination: ~/code/dotfiles
+dotfiles_home: "~"
 dotfiles_files:
-  - .zshrc
-  - .gitignore
-  - .inputrc
-  - .osx
+  - .config/fish/config.fish
+  - .config/fish/aliases.fish
+  - .config/fish/path.fish
+  - .config/fish/functions/mkcd.fish
+  - git/.gitignore
+  - git/.gitconfig
+  - .macos
   - .vimrc
 
 homebrew_installed_packages:
+  # Tools
   # - ansible # Installed via Pip.
-  - autoconf
-  - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
-  - git
-  - github/gh/gh
-  - go
-  - gpg
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
-  - nmap
+  - ack
+  - coreutils
+  - fish
+  - grc
+  - libgit2
   - node
-  - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
   - openssl
-  - pv
+  - readline
+  - roundup
+  - svn # Required for fonts
   - wget
-  - wrk
-  - zsh-history-substring-search
+  - yarn
+  # More recent versions of macOS tools
+  - curl
+  - git
+  - grep
+  - nano
 
 homebrew_taps:
   - homebrew/core
@@ -69,45 +67,67 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - chromedriver
+  # Applications
+  - 1password
   - docker
+  - dozer
   - dropbox
   - firefox
   - google-chrome
-  - handbrake
-  - licecap
-  - sequel-ace
+  - insomnia
+  - iterm2
+  - keepingyouawake
+  - keka
+  - macdown
+  - meetingbar
+  - ngrok
+  - notion
+  - postico
+  - puush
+  - raycast
+  - sequel-pro
   - slack
+  - sourcetree
+  - spotify
   - sublime-text
-  - transmit
-  - vagrant
+  - sensiblesidebuttons
+  - transmission
+  - telegram
+  - visual-studio-code
+  - vlc
+  - webstorm
+  - whatsapp
+  # Screensavers
+  - aerial
+  - brooklyn
+  # Fonts
+  - font-fira-code-nerd-font
+  - font-hack
+  - font-inter
+  - font-lato
+  - font-open-sans
+  - font-open-sans-condensed
+  - font-source-code-pro
+  - font-source-sans-pro
+  - font-source-serif-pro
+  - font-roboto
+  - font-roboto-mono
 
 # See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_apps: []
+mas_installed_apps:
+  - { id: 1502839586, name: "Hand Mirror" }
 mas_email: ""
 mas_password: ""
 
-osx_script: "~/.osx --no-restart"
+macos_script: "~/.macos --no-restart"
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
-composer_packages: []
-# - name: drush
-#   state: present # present/absent, default: present
-#   version: "^8.1" # default: N/A
 gem_packages: []
-# - name: bundler
-#   state: present # present/absent/latest, default: present
-#   version: "~> 1.15.1" # default: N/A
-npm_packages: []
-# - name: webpack
-#   state: present # present/absent/latest, default: present
-#   version: "^2.6" # default: N/A
+npm_packages:
+  - name: n
 pip_packages: []
-# - name: mkdocs
-#   state: present # present/absent/latest, default: present
-#   version: "0.16.3" # default: N/A
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
