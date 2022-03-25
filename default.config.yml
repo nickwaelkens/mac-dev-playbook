@@ -35,8 +35,8 @@ dotfiles_files:
   - .config/fish/aliases.fish
   - .config/fish/path.fish
   - .config/fish/functions/mkcd.fish
-  - git/.gitignore
-  - git/.gitconfig
+  - .gitignore
+  - .gitconfig
   - .macos
   - .vimrc
 
