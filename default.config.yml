@@ -115,8 +115,8 @@ homebrew_cask_apps:
   - font-roboto-mono
 
 # See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_apps:
-  - { id: 1502839586, name: "Hand Mirror" }
+#mas_installed_apps:
+#  - { id: 1502839586, name: "Hand Mirror" }
 mas_email: ""
 mas_password: ""
 
