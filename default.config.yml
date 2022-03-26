@@ -54,6 +54,7 @@ homebrew_installed_packages:
   - openssl
   - pinentry-mac
   - readline
+  - rename
   - roundup
   - starship
   - svn  # Required for fonts
@@ -109,6 +110,7 @@ homebrew_cask_apps:
   - font-fira-code-nerd-font
   - font-hack
   - font-inter
+  - font-jetbrains-mono-nerd-font
   - font-lato
   - font-open-sans
   - font-open-sans-condensed
