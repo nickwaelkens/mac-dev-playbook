@@ -1,6 +1,6 @@
 ---
 # Custom iTerm2 theme.
-- name: Ensure iTerm2 "Solarized Dark" theme is added.
+- name: Ensure themes are added.
   copy:
     src: files/terminal/schemes
     dest: ~/.config/iterm2
@@ -8,7 +8,7 @@
 - name: Run script that properly installs the scheme(s) I want to be using in iTerm2.
   # See https://github.com/mbadolato/iTerm2-Color-Schemes for documentation on how to use this import script.
   script: | # Run multi-line commands in Ansible.
-    files/terminal/tools/import-scheme.sh 'schemes/Solarized Dark.itermcolors'
+    files/terminal/tools/import-scheme.sh 'schemes/Tomorrow Night Eighties.itermcolors'
 
 - name: Sync iTerm preferences.
   shell: |
