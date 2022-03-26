@@ -51,6 +51,7 @@ homebrew_installed_packages:
   - libgit2
   - node
   - openssl
+  - pinentry-mac
   - readline
   - roundup
   - svn # Required for fonts
