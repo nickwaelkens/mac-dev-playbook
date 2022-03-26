@@ -35,6 +35,7 @@ dotfiles_files:
   - .config/fish/aliases.fish
   - .config/fish/path.fish
   - .config/fish/functions/mkcd.fish
+  - .config/starship.toml
   - .gitignore
   - .gitconfig
   - .macos
@@ -54,6 +55,7 @@ homebrew_installed_packages:
   - pinentry-mac
   - readline
   - roundup
+  - starship
   - svn  # Required for fonts
   - wget
   - yarn
