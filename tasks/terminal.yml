@@ -1,28 +1,18 @@
 ---
-# Custom Terminal theme.
-- name: Get current Terminal profile.
-  command: defaults read com.apple.terminal 'Default Window Settings'
-  register: terminal_theme
-  changed_when: false
-  check_mode: false
-
-- name: Ensure custom Terminal profile is added.
+# Custom iTerm2 theme.
+- name: Ensure iTerm2 "Solarized Dark" theme is added.
   copy:
-    src: files/terminal/JJG-Term.terminal
-    dest: /tmp/JJG-Term.terminal
-  changed_when: false
-  when: "'JJG-Term' not in terminal_theme.stdout"
+    src: files/terminal/schemes
+    dest: ~/.config/iterm2
 
-- name: Ensure custom Terminal profile is added.
-  command: open /tmp/JJG-Term.terminal
-  changed_when: false
-  when: "'JJG-Term' not in terminal_theme.stdout"
+- name: Run script that properly installs the scheme(s) I want to be using in iTerm2.
+  # See https://github.com/mbadolato/iTerm2-Color-Schemes for documentation on how to use this import script.
+  script: | # Run multi-line commands in Ansible.
+    files/terminal/tools/import-scheme.sh 'schemes/Solarized Dark.itermcolors'
 
-# TODO: This doesn't work in Yosemite. Consider a different solution?
-- name: Ensure custom Terminal profile is set as default.
-  command: "{{ item }}"
-  with_items:
-    - defaults write com.apple.terminal 'Default Window Settings' -string JJG-Term
-    - defaults write com.apple.terminal 'Startup Window Settings' -string JJG-Term
-  changed_when: false
-  when: "'JJG-Term' not in terminal_theme.stdout"
+- name: Sync iTerm preferences.
+  shell: |
+    # Specify the preferences directory
+    defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "{{ playbook_dir }}/files/terminal"
+    # Tell iTerm2 to use the custom preferences in the directory
+    defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
