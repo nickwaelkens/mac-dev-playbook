@@ -49,6 +49,7 @@ homebrew_installed_packages:
   - fish
   - gnupg
   - grc
+  - jump
   - libgit2
   - node
   - openssl
