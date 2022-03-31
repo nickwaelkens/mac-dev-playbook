@@ -85,6 +85,7 @@ homebrew_cask_apps:
   - iterm2
   - keepingyouawake
   - keka
+  - lulu
   - macdown
   - meetingbar
   - ngrok
@@ -104,6 +105,7 @@ homebrew_cask_apps:
   - vlc
   - webstorm
   - whatsapp
+  - zoom
   # Screensavers
   - aerial
   - brooklyn
