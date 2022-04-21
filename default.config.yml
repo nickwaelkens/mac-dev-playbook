@@ -47,6 +47,7 @@ homebrew_installed_packages:
   - ack
   - coreutils
   - fish
+  - fnm
   - gnupg
   - grc
   - jump
@@ -135,8 +136,7 @@ macos_script: "~/.macos --no-restart"
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
 gem_packages: []
-npm_packages:
-  - name: n
+npm_packages: []
 pip_packages: []
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
