@@ -28,7 +28,7 @@ sudoers_custom_config: ''
 dotfiles_repo: https://github.com/nickwaelkens/dotfiles.git
 dotfiles_repo_version: master
 dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: ~/code/dotfiles
+dotfiles_repo_local_destination: ~/dev/dotfiles
 dotfiles_home: "~"
 dotfiles_files:
   - .config/fish/config.fish
@@ -53,6 +53,7 @@ homebrew_installed_packages:
   - jump
   - libgit2
   - node
+  - nvim
   - openssl
   - pinentry-mac
   - readline
@@ -89,12 +90,12 @@ homebrew_cask_apps:
   - keka
   - lulu
   - macdown
-  - meetingbar
   - ngrok
   - notion
   - postico
   - puush
   - raycast
+  - rectangle
   - sequel-pro
   - slack
   - sourcetree
@@ -118,7 +119,6 @@ homebrew_cask_apps:
   - font-jetbrains-mono-nerd-font
   - font-lato
   - font-open-sans
-  - font-open-sans-condensed
   - font-source-code-pro
   - font-source-sans-pro
   - font-source-serif-pro
