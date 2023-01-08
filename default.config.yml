@@ -59,6 +59,7 @@ homebrew_installed_packages:
   - readline
   - rename
   - roundup
+  - ripgrep
   - starship
   - svn  # Required for fonts
   - wget
