@@ -1,1 +1,12 @@
 ---
+# Keep CI fast: install a small subset instead of everything.
+homebrew_installed_packages:
+  - fish
+  - starship
+  - wget
+
+homebrew_cask_apps:
+  - firefox
+
+# ~/.macos changes system settings, don't run it on CI runners.
+configure_macos: false

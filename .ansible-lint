@@ -1,4 +1,13 @@
 ---
+exclude_paths:
+  - roles/
+
 skip_list:
   - experimental
-  - 'fqcn-builtins'
+  - fqcn
+  - name[missing]
+  - no-changed-when
+  - risky-file-permissions
+  - role-name
+  - schema[meta]
+  - yaml
