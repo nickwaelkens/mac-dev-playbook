@@ -76,8 +76,11 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   # Applications
   - 1password
+  - 1password-cli
+  - betterdisplay
   - cmux
-#  - docker
+  - diffmerge
+  - docker-desktop
   - dropbox
   - firefox
   - keepingyouawake
@@ -103,6 +106,7 @@ homebrew_cask_apps:
   - font-fira-code-nerd-font
   - font-hack
   - font-inter
+  - font-iosevka
   - font-jetbrains-mono-nerd-font
   - font-lato
   - font-open-sans
