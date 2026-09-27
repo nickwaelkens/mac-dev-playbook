@@ -16,7 +16,6 @@
         state: directory
       loop:
         - ~/.config/fish/functions
-        - ~/.config/iterm2
       tags: ['always']
 
   roles:
@@ -37,10 +36,6 @@
     - import_tasks: tasks/sudoers.yml
       when: configure_sudoers
       tags: ['sudoers']
-
-    - import_tasks: tasks/terminal.yml
-      when: configure_terminal
-      tags: ['terminal']
 
     - import_tasks: tasks/macos.yml
       when: configure_macos
