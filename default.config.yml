@@ -70,34 +70,25 @@ homebrew_installed_packages:
   - grep
   - nano
 
-homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
-  - homebrew/cask-fonts
+homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   # Applications
   - 1password
-  - docker
-  - dozer
+#  - docker
   - dropbox
   - firefox
-  - google-chrome
-  - insomnia
   - iterm2
   - kap
   - keepingyouawake
   - keka
   - lulu
-  - macdown
-  - ngrok
   - notion
+  - obsidian
   - postico
-  - puush
   - raycast
   - rectangle
-  - sequel-pro
   - slack
   - sourcetree
   - spotify
@@ -107,12 +98,8 @@ homebrew_cask_apps:
   - telegram
   - visual-studio-code
   - vlc
-  - webstorm
   - whatsapp
   - zoom
-  # Screensavers
-  - aerial
-  - brooklyn
   # Fonts
   - font-fira-code-nerd-font
   - font-hack
@@ -121,8 +108,6 @@ homebrew_cask_apps:
   - font-lato
   - font-open-sans
   - font-source-code-pro
-  - font-source-sans-pro
-  - font-source-serif-pro
   - font-roboto
   - font-roboto-mono
 
