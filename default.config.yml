@@ -76,12 +76,14 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   # Applications
   - 1password
+  - cmux
 #  - docker
   - dropbox
   - firefox
   - keepingyouawake
   - keka
   - lulu
+  - macdown
   - notion
   - obsidian
   - raycast
