@@ -87,6 +87,7 @@ homebrew_cask_apps:
   - notion
   - obsidian
   - raycast
+  - rectangle
   - slack
   - sourcetree
   - spotify
