@@ -79,16 +79,12 @@ homebrew_cask_apps:
 #  - docker
   - dropbox
   - firefox
-  - iterm2
-  - kap
   - keepingyouawake
   - keka
   - lulu
   - notion
   - obsidian
-  - postico
   - raycast
-  - rectangle
   - slack
   - sourcetree
   - spotify
