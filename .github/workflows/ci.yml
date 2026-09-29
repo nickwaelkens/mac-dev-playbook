@@ -83,3 +83,6 @@ jobs:
           tail ${idempotence} | grep -q 'changed=0.*failed=0' && (echo 'Idempotence test: pass' && exit 0) || (echo 'Idempotence test: fail' && exit 1)
         env:
           ANSIBLE_FORCE_COLOR: '1'
+          # The first run symlinks my .gitconfig, which rewrites GitHub HTTPS
+          # URLs to SSH. The runner has no SSH key, so ignore it here.
+          GIT_CONFIG_GLOBAL: /dev/null
